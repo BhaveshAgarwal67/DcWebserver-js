@@ -1,0 +1,16 @@
+name: Node.js Package
+
+on:
+  
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: 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
